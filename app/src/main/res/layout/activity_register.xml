@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/app"
+        android:id="@+id/logo_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_register_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_border"
+        android:hint="Name"
+        android:padding="20dp"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/logo_register" />
+
+    <EditText
+        android:id="@+id/et_register_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_border"
+        android:hint="Email Id"
+        android:padding="20dp"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_name" />
+    <EditText
+        android:id="@+id/et_register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_border"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_email" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:padding="8dp"
+        android:textColor="#fff"
+        android:id="@+id/bt_Go"
+        android:background="@color/colorAccent"
+        android:drawableEnd="@android:drawable/ic_menu_send"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_register_password"
+        app:layout_constraintTop_toBottomOf="@+id/et_register_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
