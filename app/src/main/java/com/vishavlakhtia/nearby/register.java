@@ -22,6 +22,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.vishavlakhtia.nearby.outline.Users;
 
 import java.util.HashMap;
 
@@ -29,7 +30,7 @@ public class register extends AppCompatActivity {
 
     EditText register_email, register_password, register_name;
     Button bt_go;
-
+    DataSnapshot dataSnapshot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +67,8 @@ public class register extends AppCompatActivity {
                                     {
                                         Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
                                         final DatabaseReference databaseReference;
-                                        databaseReference = FirebaseDatabase.getInstance().getReference();
                                         final FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+
                                         UserProfileChangeRequest profileChangeRequest = new UserProfileChangeRequest.Builder()
                                                 .setDisplayName(name).build();
                                         currentUser.updateProfile(profileChangeRequest).addOnCompleteListener(new OnCompleteListener<Void>() {
