@@ -5,6 +5,15 @@ public class tasks {
     String title,date,taskID,time;
     String description;
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    String status;
     String price;
 
     public String getTitle() {
@@ -15,13 +24,14 @@ public class tasks {
         return date;
     }
 
-    public tasks(String title, String date, String taskID, String time, String description, String price) {
+    public tasks(String title, String date, String taskID, String time, String description, String price,String status) {
         this.title = title;
         this.date = date;
         this.taskID = taskID;
         this.time = time;
         this.description = description;
         this.price = price;
+        this.status = status;
     }
 
     public void setDate(String date) {
