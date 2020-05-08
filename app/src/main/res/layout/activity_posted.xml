@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".posted">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:textSize="32sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20sp"
+        android:hint="Title"
+        android:paddingStart="16dp"
+        android:background="@drawable/button_border"
+        android:id="@+id/post_task_title"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:textSize="32sp"
+        app:layout_constraintTop_toBottomOf="@id/post_task_title"
+        android:layout_margin="20sp"
+        android:hint="Description"
+        android:paddingLeft="16dp"
+        android:background="@drawable/button_border"
+        android:id="@+id/post_task_description"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Price"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/post_task_description"
+        app:layout_constraintTop_toBottomOf="@+id/post_task_description" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="32sp"
+        android:id="@+id/post_price"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/post_task_description" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/post_task_description"
+        android:text="Post"
+        android:id="@+id/post_taskOpen"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/post_price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
